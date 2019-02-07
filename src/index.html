@@ -3,8 +3,58 @@
     <head>
         <meta charset="UTF-8" />
         <title><%= htmlWebpackPlugin.options.title %></title>
+        <link href="https://fonts.googleapis.com/css?family=Fahkwang" rel="stylesheet">
     </head>
     <body>
-        <div id='app'></div>
+        <!-- <div id='app'></div> -->
+        <header>
+            <div class="container">
+                <h1 class="logo">netflix</h1>
+                <nav class="search">
+                    <h3 class=search__title>FIND YOUR MOVIE</h3>
+                    <input class="search__input" type="header_search" >
+                    <section class="search__config">
+                        <div class="switcher">
+                            <span class="switcher__label">SEARCH BY</span>
+                            <a class="switcher__button switcher__button--active" href="">TITLE</a>
+                            <a class="switcher__button" href="">GENRE</a>
+                        </div>
+                    </section>
+                    <a class="search__button" href="">SEARCH</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="panel">
+                <div class="container">
+                    <div class="panel__left">
+                        <div class="info">
+                            <span>7</span> movies found
+                        </div>
+                    </div>
+                    <div class="panel__right">
+                        <div class="switcher switcher--sort">
+                            <span class="switcher__label">Sort by</span>
+                            <a class="switcher__button switcher__button--active" href="">release</a>
+                            <a class="switcher__button" href="">rating</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container movies">
+                <div class="movie">
+                    <img class="movie__poster" src="./img/films/aquaman.jpg">
+                    <ul class="movie__description">
+                        <li class="description__name">aquamen</li>
+                        <li class="description__jenre">action</li>
+                        <li class="description__year">2018</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <span>netflix @lime</span>
+        </footer>
+    
     </body>
 </html>

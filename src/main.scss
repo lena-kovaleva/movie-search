@@ -1,0 +1,236 @@
+$red: #ff1744;
+$grey: #414141;
+$font_family: 'Fahkwang', sans-serif;
+$font_size_base: 17px;
+$header_text_color: white;
+
+@mixin page($min-width) {
+    padding: 0;
+    margin: 0;
+    font-family: $font_family;
+    font-size: $font_size_base;
+    box-sizing: border-box;
+    min-width: $min-width;
+}
+
+body {
+    @include page(900px);
+}
+
+html {
+    @include page(900px);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        display: inline;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 70%;
+}
+
+header {
+    color: $header_text_color;
+    background: url(./img/header.png) no-repeat center top / cover;
+    height: 350px;
+    box-sizing: border-box;
+}
+
+.logo {
+    padding-top: 25px;
+    margin: 0px;
+    font-size: $font_size_base*1.2;
+    color: $red;
+}
+
+
+.search {
+    position: relative;
+
+    &__title {
+        font-size: $font_size_base;
+        font-weight: 100;
+        padding: 0px;
+        margin-top: 75px;
+        margin-bottom: 40px;
+    }
+
+    &__input {
+        width: 100%;
+        background: black;
+        border: black 1px solid;
+        border-bottom: $red 3px solid;
+        border-radius: 2px;
+        font-size: $font_size_base;
+        color: white;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+
+}
+
+@mixin switcher($color, $font-size, $bg-color, $active-bg-color) {
+    color: $color;
+    font-size: $font-size;
+    border-radius: 3px;
+    background: $bg-color;
+    padding: 2px 25px;
+
+    &--active {
+        background: $active-bg-color;
+    }
+
+    &:hover{
+        background: $active-bg-color;
+    }
+}
+
+
+
+.switcher {
+    &__button {
+        @include switcher($header_text_color, 13px, $grey, $red)    
+    }
+    // font-size: $font_size_base*0.8;
+    //     &__button {
+    //         border-radius: 3px;
+    //         background: $grey;
+    //         padding: 2px 25px;
+
+    //         &--active {
+    //             background: $red;
+    //         }
+
+    //         &:hover{
+    //             background: $red;
+    //         }
+
+    //     }
+
+}
+
+.switcher--sort {
+    .switcher__button {
+        @include switcher($header_text_color, 13px, blue, green)
+    }
+}
+
+
+
+//     a {
+//         color: $header_text_color;
+//     }
+
+//     ul {
+//         font-size: $font_size_base*0.80;
+//         li {
+//             margin-right: 17px;
+//             line-height: 30px;
+//         }
+//     }
+// }
+
+// .nav {
+//     position: relative;
+
+//     &__search {
+//         width: 100%;;
+//         background: black;
+//         border: black 1px solid;
+//         border-bottom: $red 3px solid;
+//         border-radius: 2px;
+//         font-size: $font_size_base;
+//         color: white;
+//         padding: 20px 30px;
+//         box-sizing: border-box;
+//         margin-bottom: 20px;
+
+//     }
+
+//     &__search-button {
+//         position: absolute;
+//         right: 0px;
+//         background: $red;
+//         font-size: $font_size_base;
+//         text-align: center;
+//         width: 25%;
+//         border-radius: 3px;
+//     }
+
+//     &__button {
+//         border-radius: 3px;
+//         background: $grey;
+//         padding: 2px 25px;
+
+//         &--activ {
+//             background: $red;
+//         }
+
+//         &:hover{
+//             background: $red;
+//         }
+
+//     }
+// }
+
+
+// main {
+//     color: $grey;
+//     font-size: 40px;
+// }
+
+// .info {
+//     height: 70px;
+//     background: lightgray;
+//     font-size: $font_size_base*0.8;
+//     padding-top: 20px;
+//     box-sizing: border-box;
+// }
+
+// .movies {
+//     margin: 80px auto;
+//     display: flex;
+//     clear: both;
+//     display: -webkit-flex;
+//     display: -moz-flex;
+//     display: -ms-flex;
+//     display: -o-flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+// }
+
+// .movie__poster {
+//     box-sizing: border-box;
+//     width: 33%;
+//     height: 33%;
+//     padding: 2%;
+
+//     &::after {
+//         content: "";
+//         width: 33%;
+//     }
+// }
+
+// footer {
+//     height: 80px;
+//     background: $grey;
+//     margin-top: 100%;
+//     color: $red;
+//     font-size: $font_size_base;
+//     font-weight: bold;
+//     padding: 30px 140px;
+//     box-sizing: border-box;
+// }
