@@ -79,52 +79,37 @@ header {
         margin-bottom: 20px;
     }
 
-
 }
 
-@mixin switcher($color, $font-size, $bg-color, $active-bg-color) {
+
+
+@mixin switcher($color, $color-active, $font-size, $bg-color, $active-bg-color) {
     color: $color;
     font-size: $font-size;
     border-radius: 3px;
-    background: $bg-color;
+    background-color: $bg-color;
     padding: 2px 25px;
 
     &--active {
+        color: $color-active;
         background: $active-bg-color;
     }
 
     &:hover{
+        color: $color-active;
         background: $active-bg-color;
     }
 }
 
-
-
 .switcher {
     &__button {
-        @include switcher($header_text_color, 13px, $grey, $red)    
+        @include switcher($header_text_color, $header_text_color, 16px, $grey, $red)    
     }
-    // font-size: $font_size_base*0.8;
-    //     &__button {
-    //         border-radius: 3px;
-    //         background: $grey;
-    //         padding: 2px 25px;
-
-    //         &--active {
-    //             background: $red;
-    //         }
-
-    //         &:hover{
-    //             background: $red;
-    //         }
-
-    //     }
-
 }
 
 .switcher--sort {
     .switcher__button {
-        @include switcher($header_text_color, 13px, blue, green)
+        @include switcher($grey, $red, 13px, transparent, transparent)
     }
 }
 
