@@ -1,4 +1,5 @@
 import React from "react";
+import Switcher from "./Switcher";
 
 const SearchForm = () => (
     <nav className="search">
@@ -6,11 +7,7 @@ const SearchForm = () => (
         <input className="search__input" type="header_search" />
         <section className="flex">
             <div className="search__config">
-                <div className="switcher">
-                    <span className="switcher__label">SEARCH BY</span>
-                    <a className="switcher__button switcher__button--active" href="">TITLE</a>
-                    <a className="switcher__button" href="">GENRE</a>
-                </div>
+                <Switcher label="SEARCH BY" items={ ["TITLE", "GANRE"] } value='TITLE' />
             </div>
             <a className="search__button" href="">SEARCH</a>
         </section>
