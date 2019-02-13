@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MovieDetails = () => (
-    <section className="container details flex">
+    <section className="details flex">
         <div className="details__image">
             <img className="film-poster" src="../src/img/films/aquaman.jpg"/>
         </div>
