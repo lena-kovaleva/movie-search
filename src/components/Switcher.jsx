@@ -8,8 +8,6 @@ const Switcher = ({ label, items, value, className }) => (
                 item => <a key={item} className={ `switcher__button ${item === value ? 'switcher__button--active' : ''}` } href="">{ item }</a>
             )
         }
-        {/* <a className="switcher__button switcher__button--active" href="">TITLE</a>
-        <a className="switcher__button" href="">GENRE</a> */}
     </div>
 )
 

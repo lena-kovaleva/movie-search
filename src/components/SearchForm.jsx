@@ -1,5 +1,6 @@
 import React from "react";
 import Switcher from "./Switcher";
+import Button from "./Button";
 
 const SearchForm = () => (
     <nav className="search">
@@ -9,7 +10,7 @@ const SearchForm = () => (
             <div className="search__config">
                 <Switcher label="SEARCH BY" items={ ["TITLE", "GANRE"] } value='TITLE' />
             </div>
-            <a className="search__button" href="">SEARCH</a>
+            <Button label="SEARCH" className="search__button"/>
         </section>
     </nav>
 )

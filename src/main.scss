@@ -44,6 +44,7 @@ ul {
     display: -o-flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
 }
 
 .container {
@@ -90,6 +91,7 @@ header {
         border: black 1px solid;
         border-bottom: $red 3px solid;
         border-radius: 2px;
+        outline: none;
     }
 
     &__button {
@@ -100,11 +102,19 @@ header {
         background: $red;
         border-radius: 3px;
         font-weight: bold;
+        &:hover{
+            color: $red;
+            background: #ff8a80;
+        }
         &--white {
             width: 100px;
             color: $red;
             background: white;
             padding: 10px 25px;
+            &:hover{
+                background: $red;
+                color: $header_text_color;
+            }
         }
     }
 }
@@ -156,10 +166,18 @@ main {
     margin-bottom: 50px;
 }
 
+.movies {
+    justify-content: flex-start;
+}
 
 .movie {
     width: 30%;
     height: 30%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    &:nth-child(3n) {
+        padding-right: 0px;
+    }
 
     &__title {
         padding: 0px;
@@ -217,6 +235,7 @@ main {
     }
     &__release-date {
         font-weight: bold;
+        margin-right: 10px;
     }
     &__time {
         font-weight: bold;
