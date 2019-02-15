@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import "./Switcher.scss";
 
 class Switcher extends Component {
     state = {

@@ -1,0 +1,9 @@
+@import '../common.scss';
+
+.header {
+    color: $header_text_color;
+    background: url(../img/header.png) no-repeat center top / cover;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}

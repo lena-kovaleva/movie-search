@@ -1,15 +1,16 @@
 import React from 'react';
+import './SearchResult.scss';
 
-const SearchResult = () => (
+const SearchResult = ({ title, genre, picture, release }) => (
     <div className="movie">
-        <img className="film-poster" src="../src/img/films/aquaman.jpg"/>
+        <img src={ picture }/>
         <div className="flex">
-            <div>
-                <h3 className="movie__title">aquaman</h3>
-                <p className="movie__genre">action</p>
+            <div className="movie__info">
+                <h3 className="movie__title">{ title }</h3>
+                <p className="movie__genre">{ genre }</p>
             </div>
             <div>
-                <p className="movie__release-date"> 2018 </p>
+                <p className="movie__release-date">{ release }</p>
             </div>
         </div>
     </div>

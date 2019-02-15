@@ -1,0 +1,53 @@
+@import '../common.scss';
+
+.search {
+    position: relative;
+    font-size: $font_size_base*0.7;
+    line-height: 25px;
+
+    &__title {
+        padding: 0px;
+        margin-top: 75px;
+        margin-bottom: 40px;
+        font-size: $font_size_base;
+        font-weight: 100;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 20px 30px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        color: white;
+        font-size: $font_size_base;
+        background: black;
+        border: black 1px solid;
+        border-bottom: $red 3px solid;
+        border-radius: 2px;
+        outline: none;
+    }
+
+    &__button {
+        width: 25%;
+        color: $header_text_color;
+        font-size: $font_size_base*0.8;
+        text-align: center;
+        background: $red;
+        border-radius: 3px;
+        font-weight: bold;
+        &:hover{
+            color: $red;
+            background: #ff8a80;
+        }
+        &--white {
+            width: 100px;
+            color: $red;
+            background: white;
+            padding: 10px 25px;
+            &:hover{
+                background: $red;
+                color: $header_text_color;
+            }
+        }
+    }
+}

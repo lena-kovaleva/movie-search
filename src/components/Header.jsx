@@ -1,8 +1,9 @@
 import React from 'react';
 import Logo from './Logo';
+import './Header.scss';
 
 const Header = ({children, extension}) => (
-    <header>
+    <header className="header">
         <section className="container flex">
             <Logo>
                 movie-online

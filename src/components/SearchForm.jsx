@@ -1,4 +1,5 @@
 import React from "react";
+import './SearchForm.scss';
 import Switcher from "./Switcher";
 import Button from "./Button";
 

@@ -1,6 +1,7 @@
 import React from 'react';
-
+import "./Panel.scss"
 import Switcher from './Switcher';
+
 
 const Panel = () => (
     <section className="panel">

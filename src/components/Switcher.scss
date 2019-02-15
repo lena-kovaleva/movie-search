@@ -1,0 +1,33 @@
+@import "../common.scss";
+
+@mixin switcher ($color, $color-active, $bg-color, $active-bg-color) {
+    color: $color;
+    background-color: $bg-color;
+    border-radius: 3px;
+
+    &--active {
+        color: $color-active;
+        background: $active-bg-color;
+    }
+
+    &:hover{
+        color: $color-active;
+        background: $active-bg-color;
+    }
+}
+
+.switcher {
+    &__button {
+        padding: 3px 25px;
+        margin-left: 10px;
+        @include switcher($header_text_color, $header_text_color, $grey, $red)    
+    }
+}
+
+.switcher--sort {
+    font-size: $font_size_base*0.8;
+    .switcher__button {
+        padding: 0px;
+        @include switcher($grey, $red, transparent, transparent)
+    }
+}
