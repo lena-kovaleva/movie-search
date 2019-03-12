@@ -32,7 +32,14 @@ module.exports = env => {
                     test: /\.(css|sass|scss)$/,
                     use: [
                         isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-                        'css-loader',
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                modules: true,
+                                sourceMap: !isProduction,
+                                localIdentName: isProduction ? '[hash:hex]' : '[path][name]__[local]--[hash:hex:10]'
+                            }
+                        },
                         'sass-loader'
                     ]
                 },
