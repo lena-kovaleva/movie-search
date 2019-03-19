@@ -1,0 +1,12 @@
+@import '../common.scss';
+
+.movies {
+    justify-content: space-between;
+}
+
+
+.loading {
+    width: 60px;
+    height: 60px;
+    background: "/src/img/30-2.gif"
+}

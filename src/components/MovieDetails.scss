@@ -1,0 +1,74 @@
+@import "../common.scss";
+
+
+.details {
+    padding: 50px 0px;
+
+    &__image {
+        width: 35%;
+        height: 100%;
+        overflow: hidden;
+        &:hover {
+            opacity: 1;
+            -webkit-animation: flash 3s;
+            animation: flash 3s;
+        }
+    }
+
+    &__description {
+        width: 50%;
+    }
+
+}
+
+.description {
+    &__title {
+        color: $red;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+    &__rating {
+        width: 60px;
+        height: 60px;
+        margin-right: 100px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 55px;
+        box-sizing: border-box;
+        border: 3px $red solid;
+        border-radius: 30px;
+    }
+    &__genre {
+        word-wrap: break-word;
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+    &__release-date {
+        font-weight: bold;
+        margin-right: 30px;
+    }
+    &__time {
+        font-weight: bold;
+    }
+    &__text {
+        margin-top: 50px;
+    }
+}
+
+
+@-webkit-keyframes flash {
+    0% {
+        -webkit-filter: brightness(115%);
+    }
+    100% {
+        -webkit-filter: brightness(100%);
+    }
+}
+@keyframes flash {
+    0% {
+        -webkit-filter: brightness(115%);
+    }
+    100% {
+        -webkit-filter: brightness(100%);
+    }
+}

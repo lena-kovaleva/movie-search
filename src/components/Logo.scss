@@ -1,0 +1,17 @@
+@import "../common.scss";
+
+.logo {
+    padding: 0px;
+    margin: 0px;
+    font-size: $font_size_base*1.2;
+    color: $red;
+    cursor: pointer;
+    font-family: 'Monoton', cursive;
+    letter-spacing: 3px;
+    text-shadow: 0 0 3px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 15px $red, 0 0 25px $red, 0 0 30px $red;
+    transition: 1s;
+}
+
+.logo:hover{
+    text-shadow: 0 0 7px #fff, 0 0 20px #fff, 0 0 60px #fff, 0 0 60px $red, 0 0 70px $red, 0 0 80px $red, 0 0 100px $red, 0 0 200px $red;
+}
