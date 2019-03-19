@@ -8,14 +8,16 @@ class Switcher extends Component {
 
     setValue = (value) => {
         this.setState({ value });
+        this.props.onChange(value);
     }
 
     render() {
         const { label, items, className } = this.props;
         const { value } = this.state;
+    
 
         return (
-            <div className={ `switcher ${className}` }>
+            <div className={ `switcher ${className}` }  >
                 <span className="switcher__label">{ label }</span>
                 {
                     items.map(

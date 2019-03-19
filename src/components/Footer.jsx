@@ -4,7 +4,7 @@ import './Footer.scss';
 
 const Footer = () => (
     <footer className="footer">
-        <Logo>movie-online @lime </Logo>
+        @lime
     </footer>
 )
 

@@ -4,6 +4,7 @@
     color: $color;
     background-color: $bg-color;
     border-radius: 3px;
+    transition: 0.7s;
 
     &--active {
         color: $color-active;

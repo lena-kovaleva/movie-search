@@ -1,14 +1,15 @@
 import React from 'react';
 import SearchResult from './SearchResult';
 
-const SearchResults = ({ items }) => (
-   <React.Fragment>
+const SearchResults = ({ items, onResultSelect}) => (
+    <React.Fragment>
         {
-            items.map(
-                (item) => <SearchResult key={ item.id } title={ item.title } genre={item.genre} release={item.release} picture={item.picture}/>
+            (items || []).map(
+                (item) => <SearchResult key={ item.id } {...item} onSelect={ onResultSelect }/>
             )
         }
     </React.Fragment>
 )
+
 
 export default SearchResults;
